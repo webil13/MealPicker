@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block head_title %}Restaurants|{{ block.super }} {% endblock head_title %}
+
+
+{% block content %}
+<h1>Restaurants List</h1>
+<br>
+<ul>
+    {% for obj in object_list %}
+    <div class="divider"></div>
+    <li>
+        <a href="/restaurants/{{ obj.slug }}/"><h4>{{ obj.name }}</h4></a>
+        <p>{{ obj.category }}</p>
+        <p><small>{{ obj.timestamp }} | {{ obj.location }}</small></p>
+    </li>
+    <div class="divider"></div>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

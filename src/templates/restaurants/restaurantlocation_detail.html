@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block head_title %}Restaurants|{{ block.super }} {% endblock head_title %}
+
+
+{% block content %}
+<h1>{{ object.title }}</h1>
+<a href="" class="chip">{{ object.category }}</a>
+<div class="collection">
+    <p class="collection-item">
+    <span><a class="btn btn-small"><i class="small material-icons">location_on</i></a>  {{ object.location }}</span>
+    <span><a class="btn btn-small"><i class="small material-icons">date_range</i></a> {{ object.timestamp }} <a class="btn btn-small"><i class="material-icons">edit</i></a> {{ object.updated|timesince }} ago</span>
+</p>
+</div>
+{% endblock content %}

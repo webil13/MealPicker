@@ -5,9 +5,9 @@
 {% block content %}
 {{ block.super }}
 
-<h1>Hello World</h1>
+<!-- <h1>Hello World</h1>
 <p>This is my {{html_var}} coming through Django</p>
-<hr>
+<div class="divider"></div>
 {% if num is not None %}
 <p>And the random number is:{{num}}. Wow!!!!</p>
 {% endif %}
@@ -16,8 +16,8 @@
         {% if some_item|divisibleby:"2" %}
             Even Number
         {% endif %}
-        {{ some_item }} <br><br>
+        {{ some_item }} <br>
     {% endfor %}
 </p>
-<p>Item of our choice is {{some_item}}</p>
+<p>Item of our choice is {{some_item}}</p> -->
 {% endblock content %}
